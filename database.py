@@ -5,11 +5,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 #Путь к файлу
-SQLALCHEMY_DATABASE_URL ="sqlite:///./inventory.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./inventory.db"
 
 
 #Создание движка
-engine=create_engine(SQLALCHEMY_DATABASE_URL, connrct_args={"check_same_thread":False})
+engine=create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread":False})
 
 #Фабрика сессий
 SessionLocal=sessionmaker(autocommit=False,autoflush=False,bind=engine)
